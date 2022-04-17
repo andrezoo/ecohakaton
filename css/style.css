@@ -1,0 +1,50 @@
+body{overflow-x: hidden}
+.phonemenu {display: none}
+.header {margin-top: 20px; margin-left: 12.5%; border-radius: 30px; opacity: 0.95}
+.darken {box-shadow: 0 0 5px rgba(0,0,0,0.2);}
+.al-center {margin-top: auto; margin-bottom: auto}
+.al-cc>a:not(:first-child) {margin-left: 50px}
+.al-center>a {font-family: 'Raleway', sans-serif; 
+    font-weight: 300; position: relative; cursor: pointer; display: inline-block;}
+
+#icon {transition: 450ms all}
+#icon:hover {transform: rotate(180deg)}
+
+.al-center>a:after {
+    content: ''; position: absolute; width: 100%;
+    transform: scaleX(0); height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #76DD78;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.al-center>a:hover:after {transform: scaleX(1);
+    transform-origin: bottom left;}
+section[name] {display: none; opacity: 0; z-index: 100; transition: 450ms all; background: rgba(220,220,220,.95)}
+section[active="true"] {display: block !important; opacity: 1 !important}
+.workspace {margin-left: 12.5%; background: white; border-radius: 30px; margin-top: 150px}
+section[active="false"] {display: none; opacity: 0;}
+.bggray {background: rgba(234,234,234,.5);}
+.pb {font-size: 18px}
+.loginspace {margin-left: 37.5%; text-align: center;}
+.auth>input {margin-top: 2.5vh; width: 100%; border-radius: 5px; padding: 2.5% 5%; border: 3px solid rgba(234,234,234,.5);}
+a {text-decoration: none !important; color: black}
+
+@media only screen and (max-width: 1000px) {
+
+    .header{
+        margin-top: 10px; justify-content: space-between !important; align-items: center; padding: 15px 20px; width: 90% !important; margin-left: 5% !important
+    }
+    .phonemenu{
+        display: inline-block;
+    }
+    #icon {
+        width: 45px !important
+    }
+    .al-center {
+        display: none !important;
+    }
+
+}
