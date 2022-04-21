@@ -1,14 +1,24 @@
 body{overflow-x: hidden}
 .phonemenu {display: none}
-.header {margin-top: 20px; margin-left: 12.5%; border-radius: 30px; opacity: 0.95}
+.header {margin-top: 20px; margin-left: 12.5%; padding: 20px 30px !important; border-radius: 30px}
 .darken {box-shadow: 0 0 5px rgba(0,0,0,0.2);}
 .al-center {margin-top: auto; margin-bottom: auto}
 .al-cc>a:not(:first-child) {margin-left: 50px}
 .al-center>a {font-family: 'Raleway', sans-serif; 
     font-weight: 300; position: relative; cursor: pointer; display: inline-block;}
 
-#icon {transition: 450ms all}
+#icon {transition: 850ms all}
 #icon:hover {transform: rotate(180deg)}
+
+@keyframes goup {
+    from {margin-top: 100vh}
+    to {margin-top: 0}
+}
+
+section[active="true"] {
+    animation-name: goup;
+    animation-duration: 450ms;
+}
 
 .al-center>a:after {
     content: ''; position: absolute; width: 100%;
@@ -22,15 +32,51 @@ body{overflow-x: hidden}
   
 .al-center>a:hover:after {transform: scaleX(1);
     transform-origin: bottom left;}
-section[name] {display: none; opacity: 0; z-index: 100; transition: 450ms all; background: rgba(220,220,220,.95)}
+section[mainpage] {display: none; opacity: 0; z-index: 100; transition: 450ms all; background: rgba(220,220,220,.95)}
 section[active="true"] {display: block !important; opacity: 1 !important}
-.workspace {margin-left: 12.5%; background: white; border-radius: 30px; margin-top: 150px}
+.workspace {margin-left: 12.5%; margin-bottom: 40px; min-height: 90vh; background: white; border-radius: 30px; margin-top: 150px}
+.workinside {margin-bottom: 0;background-repeat: no-repeat !important; 
+    background-size: 100%; margin-bottom: 0 !important}
+.workbg00 {background: url('../img/bg0.png'); }
+.workbg01 {background: url('../img/bg1.png'); }
+.ph {margin-top: auto; margin-bottom: auto}
 section[active="false"] {display: none; opacity: 0;}
 .bggray {background: rgba(234,234,234,.5);}
 .pb {font-size: 18px}
 .loginspace {margin-left: 37.5%; text-align: center;}
 .auth>input {margin-top: 2.5vh; width: 100%; border-radius: 5px; padding: 2.5% 5%; border: 3px solid rgba(234,234,234,.5);}
 a {text-decoration: none !important; color: black}
+
+#about>a{display: inline-block;}
+#about>a>img{width: 100% !important;}
+
+.wrapper {pointer-events: none;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: -35px;
+    z-index:999;
+    display: block;
+    width: 100%;
+    height: 35px;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 77%);
+    background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 77%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 77%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+#cert{width:75%; margin-left:12.5%}
+#contextmenu {padding: 1em; width: 150px; background: white; border-radius: 0 15px 15px 15px}
+#contextmenu>a {position:relative; transition: 450ms all; display: inline-block; cursor: pointer; }
+#contextmenu>a:hover{color: #76DD78; background: rgba(250,250,250,.85);}
+
+#contextcreate {padding: 1em; width: 200px; background: white; border-radius: 0 15px 15px 15px}
+#contextcreate>a {position:relative; transition: 450ms all; display: inline-block; cursor: pointer; }
+#contextcreate>a:hover {color: #76DD78}
+
+#contextaddr {padding: 1em; width: 250px; background: white; border-radius: 0 15px 15px 15px}
+#contextaddr>a {position:relative; transition: 450ms all; display: inline-block; cursor: pointer; }
 
 @media only screen and (max-width: 1000px) {
 
@@ -46,5 +92,21 @@ a {text-decoration: none !important; color: black}
     .al-center {
         display: none !important;
     }
-
+    .workspace {
+        width: 90% !important; margin-left: 5% !important;
+    }
+    .workinside {
+        padding-left: 20px !important;
+        padding-right: 20px !important
+    }
+    .workbg00 {background: none !important;}
+    .workbg01 {background: #F4F4F4 !important;}
+    img.ph {width:300px !important}
+    #cert>a{width: 100% !important}
+    #docs {padding-left: 20px !important;
+        padding-right: 20px !important;}
+    .pm{width: 100% !important}
+    .pf {width: 300px !important; padding: 0 !important}
+    .pf>img {width: 100% !important; margin-left: 0 !important}
+    .fflex {flex: none !important}
 }

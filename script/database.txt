@@ -1,4 +1,4 @@
-АЙПИ_ВАШЕЙ_БАЗЫ_ДАННЫХ
-ИМЯ_ПОЛЬЗОВАТЕЛЯ
-ПАРОЛЬ
-НАЗВАНИЕ_БД
+remotemysql.com
+dz9ZQZYuVm
+0KiSAeFAT1
+dz9ZQZYuVm
